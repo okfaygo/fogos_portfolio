@@ -190,7 +190,37 @@ body {
   margin-bottom: 0.75rem;
 }
 
+.card-video,
+.card-img {
+  width: 100%;
+  height: 150px;
+  border-radius: calc(var(--radius) - 4px);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  object-fit: cover;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.card-video { object-fit: contain; }
+
 .card h3 { margin-bottom: 0.25rem; }
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.tech-tags span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+}
 .card p { color: var(--text-muted); font-size: 0.92rem; margin-bottom: 0.5rem; }
 
 .card a {
@@ -200,12 +230,32 @@ body {
 }
 .card a:hover { color: var(--accent-hover); }
 
-/* ============ RESUME EMBED ============ */
-.resume-frame {
+/* ============ AFTER EFFECTS (video cards) ============ */
+.ae-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 1.25rem;
+}
+
+.ae-video {
   width: 100%;
-  height: 80vh;
+  aspect-ratio: 16 / 9;
+  border-radius: calc(var(--radius) - 4px);
+  background: #000;
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  object-fit: contain;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+/* ============ RESUME ============ */
+.resume-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .download-btn {
@@ -215,9 +265,97 @@ body {
   text-decoration: none;
   padding: 0.6rem 1.2rem;
   border-radius: var(--radius);
-  margin-bottom: 1rem;
+  transition: background 0.15s, transform 0.15s;
 }
-.download-btn:hover { background: var(--accent-hover); }
+.download-btn:hover { background: var(--accent-hover); transform: translateY(-2px); }
+
+.resume {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem 2.25rem;
+}
+
+.resume-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+}
+
+.resume-contact a { color: var(--accent); text-decoration: none; }
+.resume-contact a:hover { color: var(--accent-hover); text-decoration: underline; }
+
+.resume-section { margin-bottom: 1.75rem; }
+.resume-section:last-child { margin-bottom: 0; }
+
+.resume-section h2 {
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.resume-entry { margin-bottom: 1.25rem; }
+.resume-entry:last-child { margin-bottom: 0; }
+
+.entry-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+}
+
+.entry-head h3 { font-size: 1.05rem; }
+
+.entry-date {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.entry-tag {
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: var(--text-muted);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+}
+
+.entry-sub {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 0.35rem;
+}
+
+.resume-entry ul {
+  margin: 0.4rem 0 0 1.2rem;
+}
+
+.resume-entry li {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+
+.resume-entry li strong,
+.resume-entry p strong { color: var(--text); }
+
+.resume-entry p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
 
 /* ============ FOOTER ============ */
 footer {
