@@ -112,6 +112,17 @@
         <h2>Projects</h2>
         <div class="resume-entry">
           <div class="entry-head">
+            <h3>Dokkan Translate <span class="entry-tag">Android App</span></h3>
+            <span class="entry-date">07/2026 – Present</span>
+          </div>
+          <ul>
+            <li>Built an Android app in Kotlin and Jetpack Compose that overlays a floating bubble on a running game and displays English card details in place, using MediaProjection screen capture with a single long-lived virtual display to avoid repeated system consent prompts.</li>
+            <li>Engineered an OCR and fuzzy-matching pipeline (Tesseract Japanese + rapidfuzz multi-line voting) that identifies cards against a 5,169-entry index built with Python, then retrieves structured English card data from a public API.</li>
+            <li>Automated index refreshes and signed APK releases with GitHub Actions CI/CD workflows.</li>
+          </ul>
+        </div>
+        <div class="resume-entry">
+          <div class="entry-head">
             <h3>UMBC FAQ Triage <span class="entry-tag">Web App · Team Project</span></h3>
             <span class="entry-date">09/2025 – 12/2025</span>
           </div>
@@ -160,6 +171,24 @@
 
       <article class="card">
         <video class="card-video" controls muted preload="metadata">
+          <source src="videos/dokkan translate demo.mp4" type="video/mp4" />
+        </video>
+        <h3>Dokkan Translate</h3>
+        <div class="tech-tags">
+          <span>Kotlin</span><span>Android</span><span>OCR</span>
+        </div>
+        <p>
+          Android app that reads Japanese Dokkan Battle cards straight off the
+          screen and shows their English details in a floating bubble. Screen
+          capture feeds a Tesseract OCR pass, which fuzzy-matches against a
+          5,169-card index to look up the translated kit — no screenshots, no
+          leaving the game.
+        </p>
+        <a href="https://github.com/okfaygo/dokkan-translation" target="_blank" rel="noopener">View on GitHub →</a>
+      </article>
+
+      <article class="card">
+        <video class="card-video" controls muted preload="metadata">
           <source src="videos/umbc-faq-triage-demo.mp4" type="video/mp4" />
         </video>
         <h3>UMBC FAQ Triage</h3>
@@ -190,7 +219,9 @@
       </article>
 
       <article class="card">
-        <img class="card-img" src="images/WIP.jpg" alt="Breast Cancer Diagnosis — work in progress" />
+        <video class="card-video" controls muted preload="metadata">
+          <source src="videos/streamlit-app-2026-08-06-18-19-33.webm" type="video/webm" />
+        </video>
         <h3>Breast Cancer Diagnosis</h3>
         <div class="tech-tags">
           <span>Machine Learning</span><span>Python</span><span>Jupyter</span>
